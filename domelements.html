@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body"></body>
+    <div>
+
+    <button id="btn" class="myBtn">Click me</button>
+    <h1>Hello World</h1>
+</div>
+<script>
+    const doc = document.documentElement;
+    const currentTheme = doc.getAttribute('data-theme');
+    console.log(currentTheme);
+    console.log('yhello world');
+
+
+
+    const button = document.getElementById('btn');
+    button.addEventListener('click',()=>{
+        if(currentTheme === 'dark'){
+            doc.setAttribute('data-theme','light');
+        }else{
+            doc.setAttribute('data-theme','dark');
+        }
+    });
+
+</script>
+</body>
+</html>
